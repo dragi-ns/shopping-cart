@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <main className="app-main flex">
         <Hero />
       </main>
+      <Footer />
     </div>
   );
 }

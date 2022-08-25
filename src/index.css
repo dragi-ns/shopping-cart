@@ -14,6 +14,8 @@ body {
 }
 
 a {
+  color: white;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -179,11 +181,6 @@ body {
   margin-left: auto;
 }
 
-.app-header nav a {
-  color: white;
-  font-weight: 500;
-}
-
 /*
   SHOPPING CART BUTTON
 */
@@ -282,4 +279,13 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   align-self: center;
   text-decoration: none;
+}
+
+/*
+  APP FOOTER
+*/
+
+.app-footer {
+  text-align: center;
+  padding: 0.75rem;
 }
