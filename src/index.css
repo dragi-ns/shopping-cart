@@ -13,6 +13,14 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 img {
   max-width: 100%;
 }
@@ -22,14 +30,15 @@ button {
 }
 
 :root,
-body,
-#root,
-#root > div {
+body {
   height: 100%;
   margin: 0 auto;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  color: white;
   font-family: 'Roboto', sans-serif;
   background-image: url('./images/background.jpg');
   background-repeat: no-repeat;
@@ -37,74 +46,240 @@ body {
   background-size: cover;
 }
 
+#root {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.app {
+  flex: 1;
+}
+
+/*
+  UTILITIES
+*/
+
+.flex {
+  display: flex;
+}
+
+.h-center {
+  justify-content: center;
+}
+
+.v-center {
+  align-items: center;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.gap {
+  gap: 1rem;
+}
+
+.gap--small {
+  gap: 0.5rem;
+}
+
+.gap--big {
+  gap: 1.5rem;
+}
+
 .icon {
   padding-right: 0.5rem;
 }
 
-.app {
-  max-width: 1280px;
-}
+/*
+  APP HEADER
+*/
 
 .app-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(0.5rem);
 }
 
-.app-header .logo img {
-  width: 100px;
+.app-header > .container {
+  flex-wrap: wrap;
+  padding: 1.5rem 2rem;
+  max-width: 80rem;
+  margin: 0 auto;
 }
+
+/*
+  LOGO
+*/
+
+.app-header .logo {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 500px) {
+  .app-header > .container {
+    gap: 1rem;
+  }
+
+  .app-header .logo {
+    min-width: 100%;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  }
+}
+
+.app-header .logo span:first-child {
+  color: #2ecc71;
+  font-size: 1.3rem;
+}
+
+.app-header .logo span:last-child {
+  color: white;
+  font-size: 0.8rem;
+}
+
+/*
+  NAV 
+*/
 
 .app-header nav {
   flex: 1;
-  margin-left: 2rem;
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .app-header nav {
+    margin-left: 0;
+  }
 }
 
 .app-header nav ul {
-  display: flex;
   list-style-type: none;
-  justify-content: space-between;
-  align-items: center;
+}
+
+.app-header nav li {
+  position: relative;
+}
+
+.app-header nav li.active .icon {
+  position: absolute;
+  bottom: -1.25rem;
+  left: 55%;
+  transform: translateX(-55%);
+  color: #2ecc71;
+}
+
+.app-header nav li:last-child {
+  margin-left: auto;
 }
 
 .app-header nav a {
-  color: black;
-  text-decoration: none;
+  color: white;
   font-weight: 500;
 }
 
-.app-header nav a:hover {
-  text-decoration: underline;
-}
+/*
+  SHOPPING CART BUTTON
+*/
 
 .cart-container {
   position: relative;
 }
 
 .cart-container .cart-count {
-  position: absolute;
-  background-color: orange;
   color: black;
+  background-color: #f39c12;
+  position: absolute;
   top: 0;
   left: 100%;
+  z-index: 100;
   transform: translate(-50%, -50%);
   padding: 0.35rem 0.65rem;
+  line-height: 1;
   border-radius: 5px;
   font-weight: 500;
-  text-align: center;
-  line-height: 1;
   font-size: 0.75rem;
-  z-index: 100;
+  text-align: center;
 }
 
 .cart-container .cart-btn {
-  background-color: black;
+  background-color: #27ae60;
   color: white;
   cursor: pointer;
   border-radius: 10px;
   border: none;
   font-weight: 500;
   padding: 0.75rem;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* 
+  APP MAIN
+*/
+
+.app-main {
+  flex: 1;
+}
+
+/*
+  HERO
+*/
+
+.hero {
+  flex: 1;
+}
+
+.hero > .container {
+  text-align: center;
+  max-width: 600px;
+  padding: 0 1.5rem;
+  margin: 6rem auto 1rem auto;
+}
+
+.hero .title {
+  font-size: 3.5rem;
+  font-family: 'Roboto Slab', serif;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 575px) {
+  .hero .title {
+    font-size: 2.75rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .hero .title {
+    font-size: 2.15rem;
+  }
+}
+
+.hero .description {
+  font-weight: 500;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 460px) {
+  .hero .description {
+    font-size: 0.9rem;
+  }
+}
+
+.hero a {
+  background-color: #27ae60;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  font-weight: 500;
+  padding: 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  align-self: center;
+  text-decoration: none;
 }
