@@ -3,7 +3,7 @@ import { faShoppingCart, faPepperHot } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
   return (
-    <header className="app-header">
+    <header className="app-header glass-background box-shadow">
       <div className="container flex v-center gap--small">
         <div className="logo">
           <a href="#">
@@ -26,7 +26,7 @@ function Header() {
             <li>
               <div className="cart-container">
                 <span className="cart-count">99</span>
-                <button className="cart-btn">
+                <button className="btn btn--primary btn--big">
                   <span className="icon">
                     <FontAwesomeIcon icon={faShoppingCart} />
                   </span>

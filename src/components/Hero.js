@@ -15,7 +15,7 @@ function Hero() {
           have significant health benefits! <br />
           How about something green today?
         </p>
-        <a href="#">
+        <a href="#" className="btn btn--primary btn--big">
           <span className="icon">
             <FontAwesomeIcon icon={faBasketShopping} />
           </span>
