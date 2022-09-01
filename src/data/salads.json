@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Salad 1",
+        "price": "450",
+        "image": "salad-1.png"
+    },
+    {
+        "id": 2,
+        "name": "Salad 2",
+        "price": "530",
+        "image": "salad-2.png"
+    },
+    {
+        "id": 3,
+        "name": "Salad 3",
+        "price": "590",
+        "image": "salad-3.png"
+    },
+    {
+        "id": 4,
+        "name": "Salad 4",
+        "price": "550",
+        "image": "salad-4.png"
+    },
+    {
+        "id": 5,
+        "name": "Salad 5",
+        "price": "690",
+        "image": "salad-5.png"
+    },
+    {
+        "id": 6,
+        "name": "Salad 6",
+        "price": "590",
+        "image": "salad-6.png"
+    },
+    {
+        "id": 7,
+        "name": "Salad 7",
+        "price": "590",
+        "image": "salad-7.png"
+    },
+    {
+        "id": 8,
+        "name": "Salad 8",
+        "price": "630",
+        "image": "salad-8.png"
+    },
+    {
+        "id": 9,
+        "name": "Salad 9",
+        "price": "490",
+        "image": "salad-9.png"
+    },
+    {
+        "id": 10,
+        "name": "Salad 10",
+        "price": "690",
+        "image": "salad-10.png"
+    }
+]

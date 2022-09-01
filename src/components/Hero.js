@@ -1,9 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBasketShopping } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 function Hero() {
   return (
-    <div className="hero flex h-center v-center">
+    <motion.div
+      key="hero"
+      className="hero flex h-center v-center"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}>
       <div className="container flex col h-center v-center gap">
         <h1 className="title">
           Wake Up Early, <br />
@@ -15,14 +22,14 @@ function Hero() {
           have significant health benefits! <br />
           How about something green today?
         </p>
-        <a href="#" className="btn btn--primary btn--big">
+        <Link to="/menu" className="btn btn--primary btn--big">
           <span className="icon">
             <FontAwesomeIcon icon={faBasketShopping} />
           </span>
           <span>Shop Now</span>
-        </a>
+        </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
