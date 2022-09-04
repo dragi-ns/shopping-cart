@@ -2,6 +2,7 @@
   "name": "shopping-cart",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dragi-ns.github.io/shopping-cart",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
     "@fortawesome/free-regular-svg-icons": "^6.1.2",
@@ -20,6 +21,8 @@
     "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -43,6 +46,7 @@
   },
   "devDependencies": {
     "eslint-config-prettier": "^8.5.0",
+    "gh-pages": "^4.0.0",
     "prettier": "^2.7.1"
   }
 }

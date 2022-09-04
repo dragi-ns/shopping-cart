@@ -17,7 +17,10 @@ function App() {
   return (
     <div className="app flex col">
       <CartProvider>
-        <BrowserRouter>
+        {/* I had to add a basename for the github pages. 
+            When running locally the correct url is localhost:3000/shopping-cart
+        */}
+        <BrowserRouter basename='/shopping-cart'>
           <Header toggleCartSidebar={toggleCartSidebar} />
           <AnimatePresence>
             {showCartSidebar && (
