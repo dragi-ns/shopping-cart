@@ -18,6 +18,7 @@ function CartItem({ item }, ref) {
       transition={{ ease: 'linear', duration: 0.2 }}
       className="cart-item flex gap--medium">
       <button
+        aria-label="remove"
         className="btn btn--secondary btn--small cart-item-remove-btn"
         onClick={() => removeItem(item.id)}>
         <span className="icon">
