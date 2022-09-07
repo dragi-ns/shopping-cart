@@ -1,11 +1,16 @@
 import { render, screen } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
 import userEvent from '@testing-library/user-event';
+import { MemoryRouter } from 'react-router-dom';
 import App from './App';
 
 describe('App', () => {
   it("doesn't initially render cart sidebar", () => {
-    render(<App />);
+    render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    );
 
     expect(
       screen.queryByRole('heading', { name: 'My Cart' })
@@ -13,7 +18,11 @@ describe('App', () => {
   });
 
   it('opens cart sidebar when shopping cart button is clicked', () => {
-    render(<App />);
+    render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    );
 
     const shoppingCartButton = screen.getByRole('button', { name: 'My Cart' });
     userEvent.click(shoppingCartButton);
@@ -24,7 +33,11 @@ describe('App', () => {
   });
 
   it('closes cart sidebar when close button is clicked', async () => {
-    render(<App />);
+    render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    );
 
     const shoppingCartButton = screen.getByRole('button', { name: 'My Cart' });
     userEvent.click(shoppingCartButton);

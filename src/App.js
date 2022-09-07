@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { CartProvider } from './components/CartContext';
 import AnimatedRoutes from './components/AnimatedRoutes';
@@ -17,18 +16,16 @@ function App() {
   return (
     <div className="app flex col">
       <CartProvider>
-        <BrowserRouter>
-          <Header toggleCartSidebar={toggleCartSidebar} />
-          <AnimatePresence>
-            {showCartSidebar && (
-              <CartSidebar toggleCartSidebar={toggleCartSidebar} />
-            )}
-          </AnimatePresence>
-          <main className="app-main flex">
-            <AnimatedRoutes />
-          </main>
-          <Footer />
-        </BrowserRouter>
+        <Header toggleCartSidebar={toggleCartSidebar} />
+        <AnimatePresence>
+          {showCartSidebar && (
+            <CartSidebar toggleCartSidebar={toggleCartSidebar} />
+          )}
+        </AnimatePresence>
+        <main className="app-main flex">
+          <AnimatedRoutes />
+        </main>
+        <Footer />
       </CartProvider>
     </div>
   );
