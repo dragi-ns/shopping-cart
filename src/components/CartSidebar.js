@@ -23,6 +23,7 @@ function CartSidebar({ toggleCartSidebar }) {
       <header className="cart-sidebar-header flex v-center">
         <h3 className="cart-sidebar-title">My Cart</h3>
         <button
+          aria-label="close"
           className="btn btn--secondary btn--small"
           onClick={toggleCartSidebar}>
           <span className="icon">
