@@ -38,6 +38,7 @@ function QuantityInput({
   return (
     <div className="quantity-input-container flex gap--small">
       <button
+        aria-label="decrease"
         className="btn btn--secondary btn--small"
         onClick={decrease}
         disabled={value <= minValue}>
@@ -51,9 +52,11 @@ function QuantityInput({
         max={maxValue}
         step={stepValue}
         value={value}
+        name="quantity"
         onChange={handleChange}
       />
       <button
+        aria-label="increase"
         className="btn btn--secondary btn--small"
         onClick={increase}
         disabled={value >= maxValue}>
