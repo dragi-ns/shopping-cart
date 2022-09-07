@@ -10,7 +10,7 @@ function Menu() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}>
       <div className="container flex col">
-        <h1 className="menu-title"> Salads </h1>{' '}
+        <h1 className="menu-title">Salads</h1>
         <div className="menu-items flex">
           {data.map((item) => (
             <MenuItem key={item.id} item={item} />
